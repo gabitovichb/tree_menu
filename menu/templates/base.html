@@ -1,0 +1,21 @@
+{% load menu_tags %}
+<!doctype html>
+<html lang="ru">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+<link href="{% static "css/style.css" %}" rel="stylesheet">
+      <title>The main page</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="topmenu">
+          <li><a href="#" class="active">{% draw_menu "Пункт меню №1" %}<span class="fa fa-angle-down"></span></a>
+          <li><a href="#" class="active">{% draw_menu "Пункт меню №2" %}<span class="fa fa-angle-down"></span></a>
+          <li><a href="#" class="active">{% draw_menu "Пункт меню №3" %}<span class="fa fa-angle-down"></span></a>
+          <li><a href="#" class="active">{% draw_menu "Пункт меню №4" %}<span class="fa fa-angle-down"></span></a>
+          <li><a href="#" class="active">{% draw_menu "Пункт меню №5" %}<span class="fa fa-angle-down"></span></a>
+      </ul>
+    </nav>
+   </body>
+</html>

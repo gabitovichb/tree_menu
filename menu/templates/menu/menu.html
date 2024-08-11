@@ -1,0 +1,13 @@
+<p>{{ result.menu_name }}</p>
+    <ul class="submenu">
+        {% for i in result.data %}
+            {% if i %}<li><a class="{% if request.path == i.item.url %}nav-link{% else %}nav-link-activ{% endif %}"
+                       href="{{ i.item.url }}">{{ i.item.name }}</a>{% endif %}
+                    {% if i.subitems %}<ul class="submenu">
+                        {% for subuitem in i.subitems %}
+                            <li><a class="{% if request.path == subuitem.url %}nav-link{% else %}nav-link-activ{% endif %}"
+                                href="{{ subuitem.url }}">{{ subuitem.name }}</a></li>
+                        {% endfor %}</ul>{% endif %}
+                </li>
+            {% endfor %}
+    </ul>
